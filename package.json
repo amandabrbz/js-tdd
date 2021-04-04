@@ -1,26 +1,24 @@
 {
   "name": "tdd",
   "version": "1.0.0",
-  "description": "",
+  "description": "exercising tdd",
   "main": "index.js",
   "scripts": {
     "test": "jest --watch",
     "test:deploy": "jest",
-    "nyc": "nyc npm run test:deploy"
+    "cover": "jest --coverage"
   },
-  "keywords": [],
-  "nyc": {
-    "reporter": ["text", "html"],
-    "include": ["./src/**"],
-    "exclude": ["./src/tests/*.test.js"]
+  "jest": {
+    "collectCoverage": true,
+    "coverageReporters": ["text-summary", "html", "text", "json"]
   },
+  "keywords": ["jest", "js", "tdd"],
   "author": "@amandabrbz",
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.13.14",
     "@babel/preset-env": "^7.13.12",
     "babel-jest": "^26.6.3",
-    "jest": "^26.6.3",
-    "nyc": "^15.1.0"
+    "jest": "^26.6.3"
   }
 }

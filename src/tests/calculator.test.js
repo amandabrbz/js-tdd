@@ -1,4 +1,4 @@
-import { sum, division, multiply, subtraction } from './calculator'
+import { sum, division, multiply, subtraction } from '../main/calculator'
 
 describe('calculator', () => {
   //smoke test => verificação de métodos

@@ -1,4 +1,4 @@
-import FizzBuzz from './fizzbuzz'
+import FizzBuzz from '../main/fizzbuzz'
 
 describe('FizzBuzz tests', () => {
   describe('smoke test', () => {

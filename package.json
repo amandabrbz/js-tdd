@@ -4,15 +4,23 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest --watch"
+    "test": "jest --watch",
+    "test:deploy": "jest",
+    "nyc": "nyc npm run test:deploy"
   },
   "keywords": [],
-  "author": "",
+  "nyc": {
+    "reporter": ["text", "html"],
+    "include": ["./src/**"],
+    "exclude": ["./src/tests/*.test.js"]
+  },
+  "author": "@amandabrbz",
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.13.14",
     "@babel/preset-env": "^7.13.12",
     "babel-jest": "^26.6.3",
-    "jest": "^26.6.3"
+    "jest": "^26.6.3",
+    "nyc": "^15.1.0"
   }
 }

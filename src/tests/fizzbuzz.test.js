@@ -27,5 +27,9 @@ describe('FizzBuzz tests', () => {
     it('should return a warning when is passed a string', ()=> {
       expect(FizzBuzz("oi")).toBe("Apenas números")
     })
+
+    it('should return 0 when passed 0', ()=> {
+      expect(FizzBuzz(0)).toBe(0)
+    })
   })
 })

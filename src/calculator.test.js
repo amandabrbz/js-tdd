@@ -1,35 +1,31 @@
-const calculator = require('./calculator')
+import { sum, division, multiply, subtraction } from './calculator'
 
 describe('calculator', () => {
   //smoke test => verificação de métodos
   describe('smoke tests', () => {
-    it('should exists a calculator', () => {
-      expect(calculator).toBeTruthy()
-    })
-
     it('should exists the method sum', () => {
-      expect(calculator.sum).toBeTruthy()
-      expect(calculator.sum).toBeInstanceOf(Function)
+      expect(sum).toBeTruthy()
+      expect(sum).toBeInstanceOf(Function)
     })
 
     it('should exists the method subtraction', () => {
-      expect(calculator.subtraction).toBeTruthy()
-      expect(calculator.subtraction).toBeInstanceOf(Function)
+      expect(subtraction).toBeTruthy()
+      expect(subtraction).toBeInstanceOf(Function)
     })
 
     it('should exists the method division', () => {
-      expect(calculator.division).toBeTruthy()
-      expect(calculator.division).toBeInstanceOf(Function)
+      expect(division).toBeTruthy()
+      expect(division).toBeInstanceOf(Function)
     })
 
     it('should exists the method multiply', () => {
-      expect(calculator.multiply).toBeTruthy()
-      expect(calculator.multiply).toBeInstanceOf(Function)
+      expect(multiply).toBeTruthy()
+      expect(multiply).toBeInstanceOf(Function)
     })
 
     it('should exists the method sum', () => {
-      expect(calculator.sum).toBeTruthy()
-      expect(calculator.sum).toBeInstanceOf(Function)
+      expect(sum).toBeTruthy()
+      expect(sum).toBeInstanceOf(Function)
     })
   })
 
@@ -37,34 +33,34 @@ describe('calculator', () => {
   describe('unit test', () => {
     describe('sum', () => {
       it('should return 4 when sum is called passing 2, 2', () => {
-        expect(calculator.sum(2, 2)).toBe(4)
+        expect(sum(2, 2)).toBe(4)
       })
       it('should return -8 when sum is called passing -10, 2', () => {
-        expect(calculator.sum(-10, 2)).toBe(-8)
+        expect(sum(-10, 2)).toBe(-8)
       })
     })
 
     describe('subtraction', () => {
       it('sould return 0 when subtraction is called passing 2, 2', () => {
-        expect(calculator.subtraction(2, 2)).toBe(0)
+        expect(subtraction(2, 2)).toBe(0)
       })
       it('sould return 0 when subtraction is called passing -2, 2', () => {
-        expect(calculator.subtraction(-2, 2)).toBe(-4)
+        expect(subtraction(-2, 2)).toBe(-4)
       })
     })
 
     describe('division', () => {
       it('should return 2 when division is called passing 4, 2', () => {
-        expect(calculator.division(4, 2)).toBe(2)
+        expect(division(4, 2)).toBe(2)
       })
       it('should return a warning when the second number is zero', () => {
-        expect(calculator.division(4, 0)).toBe("Não é possível!")
+        expect(division(4, 0)).toBe('Não é possível!')
       })
     })
 
     describe('multiply', () => {
       it('should return 4 whe multiply is called passing 2, 2', () => {
-        expect(calculator.multiply(2, 2)).toBe(4)
+        expect(multiply(2, 2)).toBe(4)
       })
     })
   })
